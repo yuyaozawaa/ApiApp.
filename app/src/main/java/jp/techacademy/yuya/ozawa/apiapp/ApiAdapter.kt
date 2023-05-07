@@ -49,7 +49,7 @@ class ApiAdapter : ListAdapter<Shop, ApiItemViewHolder>(ApiItemCallback()) {
  */
 class ApiItemViewHolder(private val binding: RecyclerFavoriteBinding) :
     RecyclerView.ViewHolder(binding.root) {
-    fun bind(shop: Shop, position: Int, adapter: ApiAdapter) {
+     fun bind(shop: Shop, position: Int, adapter: ApiAdapter) {
         binding.rootView.apply {
             // 偶数番目と奇数番目で背景色を変更させる
             binding.rootView.setBackgroundColor(

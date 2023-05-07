@@ -11,15 +11,17 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/favoriteImageView"
+        android:id="@+id/favo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:src="@drawable/ic_star"
+        android:src="@drawable/ic_star_border"
         app:layout_constraintEnd_toEndOf="@id/webView"
         app:layout_constraintTop_toTopOf="@id/webView"
         app:tint="@android:color/holo_orange_light" />

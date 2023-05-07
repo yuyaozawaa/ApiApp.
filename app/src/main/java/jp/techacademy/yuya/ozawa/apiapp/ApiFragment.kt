@@ -124,7 +124,7 @@ class ApiFragment : Fragment() {
     }
 
     // -----変更ここから
-    private fun updateData(isAdd: Boolean = false) {
+    public fun updateData(isAdd: Boolean = false) {
         // 読み込み中なら処理を行わずに終了
         if (isLoading) {
             return

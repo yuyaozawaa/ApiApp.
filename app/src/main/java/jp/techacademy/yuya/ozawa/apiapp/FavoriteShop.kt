@@ -28,7 +28,7 @@ open class FavoriteShop(id: String, imageUrl: String, name: String, url: String)
         /**
          * お気に入りのShopを全件取得
          */
-        fun findAll(): List<FavoriteShop> {             //なぜnull許容型でないのか？
+        fun findAll(): List<FavoriteShop> {             //なぜnull許容型でないのか
             // Realmデータベースとの接続を開く
             val config = RealmConfiguration.create(schema = setOf(FavoriteShop::class))
             val realm = Realm.open(config)
@@ -88,7 +88,7 @@ open class FavoriteShop(id: String, imageUrl: String, name: String, url: String)
 
             // 削除処理
             realm.writeBlocking {
-                val favoriteShops = query<FavoriteShop>("id=='$id'").find()//登録されているお気に入りをPrimaryKeyであるidで検索して削除
+                val favoriteShops = query<FavoriteShop>("id=='$id'").find()
                 favoriteShops.forEach {
                     delete(it)
                 }
